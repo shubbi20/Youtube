@@ -1,13 +1,162 @@
-body {
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: content-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+  font-size: 11px;
+}
+
+.box{
+  min-width: 100vw;
+  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.932);
+  background-color: rgb(22, 23, 26);
+  overflow: hidden;
+}
+
+.utubeText{
+  text-align: center;
+  font-size: 5.5rem;
+  padding-top: 2rem;
+}
+
+.textsec{
+  width: 50rem;
+  border: 0.2px solid black;
+  padding: 0.5rem;
+  margin-left:30rem; 
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  font-family: 'Nanum Gothic', sans-serif;
+  margin-bottom: 1.6rem;
+  }
+
+  .textsubmit{
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color: rgb(185, 6, 6);
+    color: rgba(255, 255, 255, 0.918);
+    font-weight: 600;
+    margin-left: 0.8rem;
+    width:6rem ;
+    border: 0.2px solid black;
+    margin-right: 1.5rem;
+    }  
+
+    .h{
+      color: red;
+      width:80%;
+    }
+
+    
+
+    img{
+      display: block;
+      margin: 2rem auto;
+      /* margin-left: auto;
+      margin-right: auto; */
+      width: 78%;
+      height:40rem
+
+    }
+
+    .DownloadSection{
+      margin:1rem 2rem 2rem 6rem;
+      color:rgba(255, 255, 255, 0.945);
+    }
+
+    .DownloadSection h1{
+      margin-bottom:1rem ;
+    }
+
+    hr{
+      border: 1px solid red;
+    }
+
+    .chip{
+    margin:0px 7px 7px 0px;
+    cursor:pointer;
+    background-color: red;
+    color:#fff ;
+    }
+
+
+  @media only screen and (max-width: 1200px){
+    html{
+      font-size: 10px;
+    }
+    .textsec{
+     margin-left: 23rem;
+    }
+}
+
+@media only screen and (max-width: 980px){
+  html{
+    font-size: 9px;
+  }
+  .textsec{
+   margin-left: 20rem;
+  }
+}
+
+@media only screen and (max-width: 810px){
+  html{
+    font-size: 9px;
+  }
+  .textsec{
+    width: 42rem;
+   margin-left: 15rem;
+  }
+  .utubeText{
+    font-size: 5rem;
+  }
+  
+}
+
+@media only screen and (max-width: 680px){
+  html{
+    font-size: 8px;
+  }
+  .textsec{
+    width: 42rem;
+   margin-left: 15rem;
+  }
+  .utubeText{
+    font-size: 4.5rem;
+  }
+  
+}
+
+@media only screen and (max-width: 580px){
+  html{
+    font-size: 8px;
+  }
+  .textsec{
+    width: 42rem;
+   margin-left: 6rem;
+  }
+  .utubeText{
+    font-size: 4.5rem;
+  }
+  
+}
+
+@media only screen and (max-width: 420px){
+  html{
+    font-size: 7px;
+  }
+  .textsec{
+    width: 41rem;
+   margin-left: 2rem;
+  }
+  .utubeText{
+    font-size: 4rem;
+  }
+  
 }
