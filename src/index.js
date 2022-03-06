@@ -80,10 +80,7 @@ export function App() {
           <MdOutlineLightMode size={22} />
         </div>
       </div>
-
-      {/* <div>
-        {var==true? api : null}
-      </div> */}
+      
       <Routes>
         <Route path="/" element={<MiddleBox/>}/>
         <Route path="/download" element={<Download />} />

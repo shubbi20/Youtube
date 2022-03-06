@@ -3,7 +3,7 @@ import { FooterBox } from "./footer"
 
 export const MiddleBox=()=>{
    return(
-       <>
+       <div className="outerBox">
        <div className="middle">
            <div className="middleInner">
            <h1 style={{fontSize:"3em" }}>Welcome to YtDownloader</h1>
@@ -13,6 +13,6 @@ export const MiddleBox=()=>{
            </div>  
        </div>
        <FooterBox/>
-       </>
+       </div>
    )
 }
