@@ -34,6 +34,7 @@ export function Download({ loading, setLoading }) {
     if (uTubeVideo) {
       setTitle(uTubeVideo.data.videoDetails.title);
       setThumbnail(uTubeVideo.data.videoDetails.thumbnails[uTubeVideo.data.videoDetails.thumbnails.length - 1].url)
+     //console.log(uTubeVideo.data.videoDetails.thumbnails[uTubeVideo.data.videoDetails.thumbnails.length - 1].url);
       setFormats(uTubeVideo.data.formats)
     }
   }
