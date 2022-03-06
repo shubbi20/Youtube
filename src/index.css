@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   font-size: 11px;
 }
@@ -24,10 +25,31 @@ html {
 
 .box {
   min-width: 100vw;
-  height: 100vh;
+  /* min-height: 100vh; */
+  height:100vh;
   color: rgba(255, 255, 255, 0.932);
   background-color: var(--background-color);
-  overflow: hidden;
+  overflow-y: scroll;
+  
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(95, 74, 74, 0.3); 
+  border-radius: 10px;
+  margin-top: 2rem;
+  margin-bottom: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  -webkit-box-shadow: inset 0 0 6px rgba(165, 133, 133, 0.5); 
 }
 
 .topIcon {
@@ -46,7 +68,7 @@ html {
 
 .topSection {
   height: 25%;
-  width: 100%;
+  width: 100vw;
   margin: 0 auto;
   max-width: 1200px;
   display: flex;
@@ -110,13 +132,13 @@ html {
 .footer {
   height: 20em;
   position: absolute;
-  bottom: 0px;
-  /* align-self: flex-end; */
+  bottom: 0px; 
+  /* /* /* align-self: flex-end; */
   display: flex;
-  align-items: flex-end;
+  align-items: flex-end; 
 }
 .outerBox {
-  /* display: inline-flexbox; */
+  
   height: 75%;
 }
 .innerfooter {
@@ -151,6 +173,10 @@ img {
 
 .DownloadSection h1 {
   margin-bottom: 1rem;
+}
+
+.thumbnail{
+  margin-top: 4em;
 }
 
 hr {
@@ -206,7 +232,16 @@ hr {
   .utubeText {
     font-size: 3.6em;
   }
+  .topSection{
+    height: 15%;
+  }
+  .outerBox{
+    height:70%;
+  }
   .middleInner {
     width: 55em;
+  }
+  .middle{
+ height:25em;
   }
 }

@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom"
 import axios from "axios"
 import './../index.css';
 import Chip from '@material-ui/core/Chip'
+import { FooterBox } from "./footer";
 
 
 export function Download({ loading, setLoading }) {
@@ -29,7 +30,9 @@ export function Download({ loading, setLoading }) {
   async function fetchData() {
     const str = getURL();
     setUrl(str)
-    const uTubeVideo = await axios.get(`http://localhost:7082/video?videoId=${str}`);
+    console.log(str);
+    const uTubeVideo = await axios.get(`https://yt-downloader-backend.herokuapp.com/video?videoId=${str}`);
+ //https://yt-downloader-backend.herokuapp.com
 
     if (uTubeVideo) {
       setTitle(uTubeVideo.data.videoDetails.title);
@@ -41,7 +44,7 @@ export function Download({ loading, setLoading }) {
 
   async function fetchAudio() {
     const str1 = getURL();
-    const uTubeAudio = await axios.get(`http://localhost:7082/audio?videoId=${str1}`);
+    const uTubeAudio = await axios.get(`https://yt-downloader-backend.herokuapp.com/audio?videoId=${str1}`);
     if (uTubeAudio) {
       setAudioFormats(uTubeAudio.data);
     }
@@ -53,7 +56,7 @@ export function Download({ loading, setLoading }) {
   }, [window.location.search]);
 
   const downloadFile = (itag, type) => {
-    window.open(`http://localhost:7082/download?title=${title}&videoId=${url}&type=${type ? "mp4" : "mp3"}&itag=${itag}`);
+    window.open(`https://yt-downloader-backend.herokuapp.com/download?title=${title}&videoId=${url}&type=${type ? "mp4" : "mp3"}&itag=${itag}`);
   }
 
   return (
@@ -77,6 +80,7 @@ export function Download({ loading, setLoading }) {
           <Chip className="chip" label={format.mimeType.split(";")[0] === "audio/mp4" ? "audio/mp3" : format.mimeType.split(";")[0]} onClick={() => { downloadFile(format.itag, format.hasVideo) }} key={index} style={{ margin: "0rem 0.8rem 0.8rem 1rem", cursor: "pointer", backgroundColor: "red", color: "#fff" }} />
         ))}
       </div>
+      
     </div>
   )
 }
