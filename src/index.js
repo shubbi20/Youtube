@@ -16,7 +16,6 @@ import { MiddleBox } from "./Components/Middlesection";
 export function App() {
   let navigate = useNavigate();
   const [url, setUrl] = useState("");
-  let parsedUrl = new URL(window.location);
 
   let query = useQuery();
 

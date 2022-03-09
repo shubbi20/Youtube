@@ -1,17 +1,15 @@
-import React, { useState, useEffect, useCallback } from "react"
-import { ReactDOM } from "react"
-import { useLocation } from "react-router-dom"
+import React, { useState, useEffect } from "react"
+// import { useLocation } from "react-router-dom"
 import axios from "axios"
 import './../index.css';
 import Chip from '@material-ui/core/Chip'
-import { FooterBox } from "./footer";
 
 
-export function Download({ loading, setLoading }) {
+export function Download() {
 
-  function useQuery() {
-    return new URLSearchParams(useLocation.search);
-  }
+  // function useQuery() {
+  //   return new URLSearchParams(useLocation.search);
+  // }
 
   function getURL() {
     let pathurl = window.location.search;
@@ -19,7 +17,7 @@ export function Download({ loading, setLoading }) {
     return stringurl;
   }
 
-  let query = useQuery();
+  // let query = useQuery();
   const [url, setUrl] = useState("");
   const [title, setTitle] = useState("Loading");
   const [thumbnail, setThumbnail] = useState("")
