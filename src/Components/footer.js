@@ -1,5 +1,4 @@
 import React from "react";
-import { GiPawHeart } from "react-icons/gi";
 
 export const FooterBox = () => {
   return (
