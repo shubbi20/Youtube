@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 html {
   font-size: 11px;
 }
@@ -26,22 +25,20 @@ html {
 .box {
   min-width: 100vw;
   /* min-height: 100vh; */
-  height:100vh;
+  height: 100vh;
   color: rgba(255, 255, 255, 0.932);
   background-color: var(--background-color);
   overflow-y: scroll;
-  
 }
 
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  
 }
 
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(95, 74, 74, 0.3); 
+  -webkit-box-shadow: inset 0 0 6px rgba(95, 74, 74, 0.3);
   border-radius: 10px;
   margin-top: 2rem;
   margin-bottom: 10px;
@@ -49,7 +46,7 @@ html {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 15px;
-  -webkit-box-shadow: inset 0 0 6px rgba(165, 133, 133, 0.5); 
+  -webkit-box-shadow: inset 0 0 6px rgba(165, 133, 133, 0.5);
 }
 
 .topIcon {
@@ -115,7 +112,7 @@ html {
   max-width: 100vw;
   /* border:0.1px solid red; */
   margin-top: 3.4rem;
-  padding:1.5em;
+  padding: 1.5em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,13 +129,12 @@ html {
 .footer {
   height: 20em;
   position: absolute;
-  bottom: 0px; 
+  bottom: 0px;
   /* /* /* align-self: flex-end; */
   display: flex;
-  align-items: flex-end; 
+  align-items: flex-end;
 }
 .outerBox {
-  
   height: 75%;
 }
 .innerfooter {
@@ -175,7 +171,7 @@ img {
   margin-bottom: 1rem;
 }
 
-.thumbnail{
+.thumbnail {
   margin-top: 4em;
 }
 
@@ -188,6 +184,30 @@ hr {
   cursor: pointer;
   background-color: red;
   color: #fff;
+}
+
+/*
+*
+*Loader Css
+*/
+
+.loader {
+  margin: 20px auto;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -232,16 +252,16 @@ hr {
   .utubeText {
     font-size: 3.6em;
   }
-  .topSection{
+  .topSection {
     height: 15%;
   }
-  .outerBox{
-    height:70%;
+  .outerBox {
+    height: 70%;
   }
   .middleInner {
     width: 55em;
   }
-  .middle{
- height:25em;
+  .middle {
+    height: 25em;
   }
 }
