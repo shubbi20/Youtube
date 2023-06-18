@@ -29,7 +29,7 @@ export function Download() {
     setUrl(str);
     console.log(str);
     const uTubeVideo = await axios.get(
-      `https://yt-downloader-backend.herokuapp.com/video?videoId=${str}`
+      `https://youtube-backend-8xm4.onrender.com/video?videoId=${str}`
     );
     //https://yt-downloader-backend.herokuapp.com
 
@@ -49,7 +49,7 @@ export function Download() {
   async function fetchAudio() {
     const str1 = getURL();
     const uTubeAudio = await axios.get(
-      `https://yt-downloader-backend.herokuapp.com/audio?videoId=${str1}`
+      `https://youtube-backend-8xm4.onrender.com/audio?videoId=${str1}`
     );
     if (uTubeAudio) {
       setAudioFormats(uTubeAudio.data);
@@ -63,7 +63,7 @@ export function Download() {
 
   const downloadFile = (itag, type) => {
     window.open(
-      `https://yt-downloader-backend.herokuapp.com/download?title=${title}&videoId=${url}&type=${
+      `https://youtube-backend-8xm4.onrender.com/download?title=${title}&videoId=${url}&type=${
         type ? "mp4" : "mp3"
       }&itag=${itag}`
     );
